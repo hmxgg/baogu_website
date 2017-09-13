@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{dede:global.cfg_webname/}</title>
+	<meta name="description" content="{dede:global.cfg_description/}" />
+	<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/font-awesome-ie7.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/index.css" />
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<nav class="nav">
+		<div class="burger">
+	  		<div class="burger__patty"></div>
+	  	</div>
+
+	  	<ul class="nav__list">
+		    <li class="nav__item">
+		    	<a href="#home" class="nav__link c-yellow" data-toggle="tooltip" title="主页">
+		    		<i class="fa fa-home"></i>
+		    	</a>
+		    </li>
+		    <li class="nav__item">
+		    	<a href="#gallery" class="nav__link c-blue" data-toggle="tooltip" title="相册">
+		    		<i class="fa fa-camera-retro"></i>
+		    	</a>
+		    </li>
+		    <li class="nav__item">
+		    	<a href="#video" class="nav__link c-red" data-toggle="tooltip" title="视频">
+		    		<i class="fa fa-film"></i>
+		    	</a>
+		    </li>
+		    <li class="nav__item">
+		    	<a href="#timeline" class="nav__link c-green" data-toggle="tooltip" title="时间线">
+		    		<i class="fa fa-calendar"></i>
+		    	</a>
+		    </li>
+		    <li class="nav__item">
+		    	<a href="#about" class="nav__link c-pink" data-toggle="tooltip" title="关于">
+		    		<i class="fa fa-heart-o"></i>
+		    	</a>
+		    </li>
+		</ul>
+	</nav>
+
+	<section class="panel mod-box-topPnael" id="home">
+		<article class="panel__wrapper">
+	   		<div class="panel__content">
+			<!-- 主图 START -->
+    			<img src="{dede:global.cfg_templets_skin/}/images/xxy3.png" alt="" title="">
+			<!-- 主图 END -->
+			</div>
+		</article>
+	</section>
+
+	<section class="panel mod-panel-gallery" id="gallery">
+		<article class="panel__wrapper">
+		    <div class="panel__content">
+				<div class="panel-title">相册<span><a href="#"><i class="fa fa-plus"></i> 更多</a></span></div>
+	      		<div class="panel__block"></div>
+				<div class="panel-wrapper clearfix">
+					<div class="row">
+						{dede:arclist type='image.' typeid='1'}
+						<div class="col-xs-3">
+							<div class="mod-box-thumb hover_list">
+	                        	<a href="[field:arcurl /]" title="" target="_blank" class="hovershow">
+	                                <img src="[field:litpic/]" alt="熊心瑶" class="hovershow-zoom">
+	                                <fieldset>
+	                                	<p>[field:title/]</p>
+	                                	<p><i class="fa fa-calendar-o"></i> 2016-11-25</p>
+	                            	</fieldset>
+	                            </a>
+	                        </div>
+						</div>
+						{/dede:arclist}
+						
+					</div>
+				</div>
+		    </div>
+		</article>
+	</section>
+
+	<section class="panel mod-panel-video" id="video">
+		<article class="panel__wrapper">
+		    <div class="panel__content">
+				<div class="panel-title">视频<span><a href="/plus/list.php?tid=6"><i class="fa fa-plus"></i> 更多</a></span></div>
+	      		<div class="panel__block"></div>
+				<div class="panel-wrapper clearfix">
+					<div class="row">
+						{dede:arclist type='arit.' typeid='6'}
+						<div class="col-xs-3">
+							<div class="mod-box-thumb hover_list">
+	                        	<a href="[field:arcurl/]" title="" target="_blank" class="hovershow">
+	                                <img src="[field:litpic/]" alt="熊心瑶" class="hovershow-zoom">
+	                                <fieldset>
+	                                	<img src="/images/play.png" alt="">
+	                            	</fieldset>
+	                            </a>
+	                        </div>
+	                        <a href="[field:arcurl/]" title="" target="_blank" class="hovershow">
+								<div class="mod-box-intro">
+									[field:title/]
+		                        </div>
+	                        </a>
+						</div>
+						{/dede:arclist}
+					</div>
+				</div>
+		    </div>
+		</article>
+	</section>
+
+	<section class="panel mod-panel-timeline" id="timeline">
+		<article class="panel__wrapper">
+		    <div class="panel__content">
+				<div class="panel-title">时间轴</div>
+	      		<div class="panel__block"></div>
+	      		<div class="panel-wrapper clearfix">
+	      		<section class="cd-horizontal-timeline">
+					<div class="timeline">
+					<div class="events-wrapper">
+						<div class="events">
+							<ol>
+								{dede:arclist  typeid='7' addfields='eventdate' channelid='18' orderby='eventdate'  orderway='asc'}
+									<li><a href="#0" data-date="[field:eventdate function="MyDate('d/m/Y',@me)" /]">
+									[field:eventdate function="MyDate('m月d日',@me)" /]</a></li>
+								{/dede:arclist}
+							</ol>
+
+							<span class="filling-line" aria-hidden="true"></span>
+								</div> <!-- .events -->
+							</div> <!-- .events-wrapper -->
+								
+							<ul class="cd-timeline-navigation">
+								<li><a href="#0" class="prev inactive">Prev</a></li>
+								<li><a href="#0" class="next">Next</a></li>
+							</ul> <!-- .cd-timeline-navigation -->
+						</div> <!-- .timeline -->
+
+						<div class="events-content">
+							<ol>
+								
+								{dede:arclist  typeid='7' addfields='eventdate,time_title,time_description' channelid='18' orderby='sortrank' orderway='asc'}
+								<li [field:global name=autoindex runphp="yes"](@me==1)? @me="class='selected'":@me="";[/field:global] data-date="[field:eventdate function="MyDate('d/m/Y',@me)" /]">
+									<h2>[field:time_title /]</h2>
+									<em>[field:eventdate function="MyDate('Y年m月d日',@me)" /]</em>
+									<p>	
+										[field:time_description /]
+									</p>
+								</li>
+								{/dede:arclist}
+								
+							</ol>
+						</div> <!-- .events-content -->
+				</section>
+	      		</div>
+	      	</div>
+	    </article>
+	</section>
+
+	<section class="panel mod-panel-about" id="about">
+		<article class="panel__wrapper clearfix">
+			<div class="mod-content-weibo">
+				<iframe width="100%" height="500" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=0&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=5863793218&verifier=2e9cca03&dpc=1"></iframe>
+			</div>
+			<div class="mod-content-social">
+				<div class="mod-social">
+					<a href="https://jq.qq.com/?_wv=1027&k=43HjPC7" target="_blank">
+						<img src="{dede:global.cfg_templets_skin/}/images/social-qq.jpg" alt="">
+					</a>
+				</div>
+				<div class="mod-social">
+					<a href="https://item.taobao.com/item.htm?id=542843001005" target="_blank">
+						<img src="{dede:global.cfg_templets_skin/}/images/social-t.jpg" alt="">
+					</a>
+				</div>
+				<div class="mod-social">
+					<a href="http://weibo.com/u/5863793218" target="_blank">
+						<img src="{dede:global.cfg_templets_skin/}/images/social-weibo.jpg" alt="">
+					</a>
+				</div>
+			</div>
+		</article>
+	</section>
+
+	<footer class="mod-box-footer">
+		<article class="panel__wrapper">
+	        <div class="flink clearfix">
+	        	<ul>
+	            	<li class="active">友情链接：</li>
+	            	<li><a href="http://www.19941105.com" target="_blank">卢静应援会</a></li>
+	            	<li><a href="http://www.zengyf.com" target="_blank">曾艳芬应援网</a></li>
+	            	<li><a href="http://www.gsq17.com" target="_blank">龚诗淇-十七号冰工厂</a></li>
+	            	<li><a href="http://www.snh48club.com" target="_blank">SNH48歌迷会</a></li>
+	            </ul>
+	        </div>
+	        <hr>
+	        COPYRIGHT © 2016 GNZ48熊心瑶应援会
+        </article>
+	</footer>
+	
+<script src="{dede:global.cfg_templets_skin/}/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<!--	<script src="{dede:global.cfg_templets_skin/}/js/jquery-2.1.1.min.js" type="text/javascript"></script>-->
+	<script src="{dede:global.cfg_templets_skin/}/js/bootstrap.min.js" type="text/javascript"</script>
+	<script src="{dede:global.cfg_templets_skin/}/js/baogu.js" type="text/javascript"></script>
+	<script src="{dede:global.cfg_templets_skin/}/js/stopExecutionOnTimeout.js" type="text/javascript"></script>
+	<script src="{dede:global.cfg_templets_skin/}/js/jquery.mobile.custom.min.js"></script>
+	<script src="{dede:global.cfg_templets_skin/}/js/main.js"></script>
+	<script>
+	var menu = document.querySelector('.nav__list');
+	var burger = document.querySelector('.burger');
+	var doc = $(document);
+	var l = $('.scrolly');
+	var panel = $('.panel');
+	var vh = $(window).height();
+	var openMenu = function () {
+	    burger.classList.toggle('burger--active');
+	    menu.classList.toggle('nav__list--active');
+	};
+	panel.eq(0).find('.panel__content').addClass('panel__content--active');
+	var scrollFx = function () {
+	    var ds = doc.scrollTop();
+	    var of = vh / 4;
+	    for (var i = 0; i < panel.length; i++) {
+	        if (window.CP.shouldStopExecution(1)) {
+	            break;
+	        }
+	        if (panel.eq(i).offset().top < ds + of) {
+	            panel.eq(i).find('.panel__content').addClass('panel__content--active');
+	        } else {
+	            panel.eq(i).find('.panel__content').removeClass('panel__content--active');
+	        }
+	    }
+	    window.CP.exitedLoop(1);
+	};
+	var scrolly = function (e) {
+	    e.preventDefault();
+	    var target = this.hash;
+	    var $target = $(target);
+	    $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 300, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	};
+	var init = function () {
+	    burger.addEventListener('click', openMenu, false);
+	    window.addEventListener('scroll', scrollFx, false);
+	    window.addEventListener('load', scrollFx, false);
+	    $('a[href^="#"]').on('click', scrolly);
+	};
+	doc.on('ready', init);
+	</script>
+	<script>
+		$(function () {
+			$('#myTab a:last').tab('show')
+		})
+	</script>
+	<script type="text/javascript">
+		$(function () { $("[data-toggle='tooltip']").tooltip(); });
+	</script>
+</body>
+</html>
