@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+date_default_timezone_set("PRC");
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,13 +17,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<![endif]-->
 	<title>GNZ48-熊心瑶应援站</title>
 	<!-- BOOTSTRAP CORE STYLE CSS -->
-	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<link href="/assets/css/bootstrap.css" rel="stylesheet" />
 	<!-- FONT AWESOME STYLE CSS -->
-	<link href="assets/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/assets/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" />
 	<!-- CUSTOM STYLE CSS -->
-	<link href="assets/css/index_style.css" rel="stylesheet" />
+	<link href="/assets/css/index_style.css" rel="stylesheet" />
 	<!-- GOOGLE FONT -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+	<link href="/assets/css/owl.carousel.min.css" rel="stylesheet" />
+	<link href="/assets/css/owl.theme.default.min.css" rel="stylesheet" />
 
 </head>
 
@@ -36,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"><img src="assets/img/title.png" /></a>
+			<a class="navbar-brand" href="#"><img src="/assets/img/title.png" /></a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
@@ -64,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="col-md-12 pad-top-more">
 
 				<a href="#" class="btn btn-lg pad-top">
-					<img class="logo-img" src="assets/img/xxy2.png">
+					<img class="logo-img" src="/assets/img/xxy2.png">
 				</a>
 				<!--<p class="col-md-8 col-md-offset-2 nav-font">
 					熊心瑶，也叫苞谷、Haruka。2017年7月29日，参加“我心翱翔”SNH48 GROUP第四届偶像年度人气总决选演唱会，获得GNZ48选拔第10名的好成绩
@@ -87,14 +91,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<h1>* * * * 美 丽 瞬 间 * * * *</h1>
 			</div>
 		</div>
-		<div class="row text-center pad-top">
-			<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="row text-center pad-top owl-carousel owl-theme owl-loaded owl-drag">
+
+			<div class="item">
+				<a href="#portfolioBig1" data-toggle="modal">
+					<img src="http://img.snh48club.com/snh48club/images/upload/day_170120/201701200506171797.jpg" class="img-responsive " alt="熊心瑶" />
+				</a>
+			</div>
+			<div class="item">
+				<a href="#portfolioBig1" data-toggle="modal">
+					<img src="http://img.snh48club.com/snh48club/images/upload/day_170120/201701200506171797.jpg" class="img-responsive " alt="熊心瑶" />
+				</a>
+			</div><div class="item">
+				<a href="#portfolioBig1" data-toggle="modal">
+					<img src="http://img.snh48club.com/snh48club/images/upload/day_170120/201701200506171797.jpg" class="img-responsive " alt="熊心瑶" />
+				</a>
+			</div><div class="item">
+				<a href="#portfolioBig1" data-toggle="modal">
+					<img src="http://img.snh48club.com/snh48club/images/upload/day_170120/201701200506171797.jpg" class="img-responsive " alt="熊心瑶" />
+				</a>
+			</div>
+			<div class="item">
+				<a href="#portfolioBig1" data-toggle="modal">
+					<img src="http://img.snh48club.com/snh48club/images/upload/day_170120/201701200506171797.jpg" class="img-responsive " alt="熊心瑶" />
+				</a>
+			</div>
+			<div class="item">
+				<a href="#portfolioBig1" data-toggle="modal">
+					<img src="http://img.snh48club.com/snh48club/images/upload/day_170120/201701200506171797.jpg" class="img-responsive " alt="熊心瑶" />
+				</a>
+			</div>
+			<div class="item">
+				<a href="#portfolioBig1" data-toggle="modal">
+					<img src="http://img.snh48club.com/snh48club/images/upload/day_170120/201701200506171797.jpg" class="img-responsive " alt="熊心瑶" />
+				</a>
+			</div>
+			<div class="item">
+				<a href="#portfolioBig1" data-toggle="modal">
+					<img src="http://img.snh48club.com/snh48club/images/upload/day_170120/201701200506171797.jpg" class="img-responsive " alt="熊心瑶" />
+				</a>
+			</div>
+			<div class="item">
 				<a href="#portfolioBig1" data-toggle="modal">
 					<img src="http://img.snh48club.com/snh48club/images/upload/day_170120/201701200506171797.jpg" class="img-responsive " alt="熊心瑶" />
 				</a>
 			</div>
 
+
 		</div>
+
 		<div class="pad-top"></div>
 
 		<div class="modal fade" id="portfolioBig1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -221,13 +266,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--FOOTER SECTION-->
 <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
 <!-- CORE JQUERY  -->
-<script src="assets/plugins/jquery-1.10.2.js"></script>
+<script src="/assets/plugins/jquery-1.10.2.js"></script>
 <!-- BOOTSTRAP SCRIPTS  -->
-<script src="assets/plugins/bootstrap.js"></script>
+<script src="/assets/plugins/bootstrap.js"></script>
 <!-- EASING SCROLL SCRIPTS PLUGIN  -->
-<script src="assets/plugins/jquery.easing.min.js"></script>
+<script src="/assets/plugins/jquery.easing.min.js"></script>
 <!-- CUSTOM SCRIPTS   -->
-<script src="assets/js/custom.js"></script>
+<script src="/assets/js/custom.js"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
+<script>
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:10,
+		responsiveClass:true,
+		dots:true,
+		autoplay:true,
+
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:3,
+				nav:false
+			},
+			1000:{
+				items:5,
+				nav:true,
+				loop:false
+			}
+		}
+	})
+</script>
 </body>
 
 </html>
