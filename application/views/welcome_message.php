@@ -27,6 +27,10 @@ date_default_timezone_set("PRC");
 
 	<link href="/assets/css/owl.carousel.min.css" rel="stylesheet" />
 	<link href="/assets/css/owl.theme.default.min.css" rel="stylesheet" />
+	<script src="http://api.html5media.info/1.1.4/html5media.min.js"></script>
+	<link href="/assets/css/video-js.css" rel="stylesheet">
+	<!-- If you'd like to support IE8 -->
+	<script src="/assets/js/videojs-ie8.min.js"></script>
 
 </head>
 
@@ -174,17 +178,29 @@ date_default_timezone_set("PRC");
 			</div>
 		</div>
 		<div class="row text-center pad-top">
-			<?php foreach ($videos as $v):?>
-			<div class="col-md-3 col-sm-3 col-xs-6 video-b">
-				<a href="<?php echo $v['pic']; ?>" data-toggle="modal">
 
-					<img class="video-img" src="<?php echo $v['pic']; ?>" class="img-responsive " alt="熊心瑶" />
-					<p><?php echo $v['title']; ?></p>
-				</a>
+			<div class="col-md-6 col-sm-6 col-xs-6 video-b">
+				<!--<a href="<?php /*echo $v['pic']; */?>" data-toggle="modal">
+
+					<img class="video-img" src="<?php /*echo $v['pic']; */?>" class="img-responsive " alt="熊心瑶" />
+					<p><?php /*echo $v['title']; */?></p>
+				</a>-->
+
+
+					<embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=11575902&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
+
 			</div>
+			<?php foreach ($videos as $v):?>
 			<?php endforeach;?>
-
-
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<ul class="list-group">
+					<li class="list-group-item">dd</li>
+					<li class="list-group-item">dd</li>
+					<li class="list-group-item">图像的数量</li>
+					<li class="list-group-item">24*7 支持</li>
+					<li class="list-group-item">每年更新成本</li>
+				</ul>
+			</div>
 		</div>
 		<div class="pad-top"></div>
 
