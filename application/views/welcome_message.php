@@ -181,7 +181,7 @@ date_default_timezone_set("PRC");
 
 			<div class="col-md-6 col-sm-6 col-xs-6 video-b">
 				<!--<a href="<?php /*echo $v['pic']; */?>" data-toggle="modal">
-
+ 
 					<img class="video-img" src="<?php /*echo $v['pic']; */?>" class="img-responsive " alt="熊心瑶" />
 					<p><?php /*echo $v['title']; */?></p>
 				</a>-->
