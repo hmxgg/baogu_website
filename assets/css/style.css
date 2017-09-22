@@ -458,3 +458,7 @@ footer .bottom-footer .link{margin-top: 10px;}
 .comment{}
 .comment h3{font-size: 15px; color: #000; font-weight: bold; text-transform: uppercase;}
 .comment textarea{height: 210px;}
+
+.video-tab{
+    color: blue;
+}
